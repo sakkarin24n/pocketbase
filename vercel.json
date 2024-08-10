@@ -1,21 +1,19 @@
 {
-     "builds": [
-       {
-         "src": "pocketbase",
-         "use": "@vercel/go"
-       }
-     ],
-     "routes": [
-       {
-         "src": "/(.*)",
-         "dest": "/pocketbase"
-       }
-     ],
-     "functions": {
-    "api/*.go": {
+  "functions": {
+    "api/index.go": {
       "runtime": "@vercel/go"
     }
-     }
+  },
+  "builds": [
+    {
+      "src": "main.go",
+      "use": "@vercel/go"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.go"
+    }
+  ]
 }
-
-  
