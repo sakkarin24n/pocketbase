@@ -10,5 +10,12 @@
          "src": "/(.*)",
          "dest": "/pocketbase"
        }
-     ]
+     ],
+     "functions": {
+    "api/*.go": {
+      "runtime": "@vercel/go"
+    }
+     }
 }
+
+  
