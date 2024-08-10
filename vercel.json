@@ -1,0 +1,14 @@
+{
+     "builds": [
+       {
+         "src": "pocketbase",
+         "use": "@vercel/go"
+       }
+     ],
+     "routes": [
+       {
+         "src": "/(.*)",
+         "dest": "/pocketbase"
+       }
+     ]
+}
